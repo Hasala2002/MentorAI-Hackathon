@@ -1,13 +1,13 @@
 import { CodeiumEditor } from "@codeium/react-code-editor"
 import { useState } from "react"
 
-import { PythonProvider, usePython } from 'react-py'
+// import { PythonProvider, usePython } from 'react-py'
 
 const Coding = () => {
 
     const [code, setCode] = useState("# Start Coding Here")
 
-    const { runPython, stdout, stderr, isLoading, isRunning } = usePython()
+    // const { runPython, stdout, stderr, isLoading, isRunning } = usePython()
 
     return (
         <div className="flex h-[90%] max-h-[96px]: pt-10 gap-5">
@@ -31,25 +31,25 @@ const Coding = () => {
                     <br />
                     Good luck with your interview preparation! </p>
             </div>
-            <PythonProvider>
-                <div className="flex-1 border border-slate-900 rounded-md p-2 flex flex-col">
-                    <CodeiumEditor language="python" theme="vs-dark" value={code} onChange={setCode} />
-                    <div className="mt-5 flex flex-col border border-slate-900 rounded-md p-2 text-left">
-                        <div className="text-md font-extrabold capitalize mb-2 text-blue-500 flex-1 text-left h-48">console</div>
-                        <p className="italic font-extralight text-sm">{stdout || '...waiting to run code'}</p>
-                    </div>
-                    <div className="mt-3 flex gap-2">
-                        <button onClick={() => {
-                            runPython(code)
-                        }}>
-                            Run Code
-                        </button>
-                        <button>
-                            Submit
-                        </button></div>
-
+            {/* <PythonProvider> */}
+            <div className="flex-1 border border-slate-900 rounded-md p-2 flex flex-col">
+                <CodeiumEditor language="python" theme="vs-dark" value={code} onChange={setCode} />
+                <div className="mt-5 flex flex-col border border-slate-900 rounded-md p-2 text-left">
+                    <div className="text-md font-extrabold capitalize mb-2 text-blue-500 flex-1 text-left h-48">console</div>
+                    <p className="italic font-extralight text-sm">{stdout || '...waiting to run code'}</p>
                 </div>
-            </PythonProvider>
+                <div className="mt-3 flex gap-2">
+                    <button onClick={() => {
+                        // runPython(code)
+                    }}>
+                        Run Code
+                    </button>
+                    <button>
+                        Submit
+                    </button></div>
+
+            </div>
+            {/* </PythonProvider> */}
 
         </div>
     )

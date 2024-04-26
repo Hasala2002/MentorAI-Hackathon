@@ -10,15 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@api/eden-ai": "file:.api/apis/eden-ai",
     "@codeium/react-code-editor": "^1.0.12",
-    "@google-ai/generativelanguage": "^2.3.0",
     "axios": "^1.6.8",
     "google-auth-library": "^9.9.0",
-    "python-shell": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-py": "^1.10.7",
     "react-router-dom": "^6.23.0"
   },
   "devDependencies": {
