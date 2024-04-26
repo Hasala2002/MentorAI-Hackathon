@@ -36,7 +36,7 @@ const Coding = () => {
                 <CodeiumEditor language="python" theme="vs-dark" value={code} onChange={setCode} />
                 <div className="mt-5 flex flex-col border border-slate-900 rounded-md p-2 text-left">
                     <div className="text-md font-extrabold capitalize mb-2 text-blue-500 flex-1 text-left h-48">console</div>
-                    <p className="italic font-extralight text-sm">{stdout || '...waiting to run code'}</p>
+                    <p className="italic font-extralight text-sm">{'...waiting to run code'}</p>
                 </div>
                 <div className="mt-3 flex gap-2">
                     <button onClick={() => {
